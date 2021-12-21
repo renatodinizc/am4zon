@@ -9,10 +9,10 @@ describe 'Visitor visits home page' do
   end
 
   it 'and sees full list of books avaiable successfully' do
-    author = create(:author, name: 'J.K. Rowling', nationality: 'British')
-    author2 = create(:author, name: 'Ayn Rand', nationality: 'Russian')
+    author = create(:author, name: 'J.K. Rowling', citizenship: 'British')
+    author2 = create(:author, name: 'Ayn Rand', citizenship: 'Russian')
     create(:book, title: 'Harry Potter and the prisoner of Azkaban',
-                  description: 'Second title of the series',
+                  description: 'Third title of the series',
                   author: author)
     create(:book, title: 'The Fountainhead',
                   description: 'One of Rands greatest novels',
@@ -21,7 +21,7 @@ describe 'Visitor visits home page' do
     visit root_path
 
     expect(page).to have_content 'Harry Potter and the prisoner of Azkaban'
-    expect(page).to have_content 'Description: Second title of the series'
+    expect(page).to have_content 'Description: Third title of the series'
     expect(page).to have_content 'Author: J.K. Rowling'
     expect(page).to have_content 'The Fountainhead'
     expect(page).to have_content 'One of Rands greatest novels'
@@ -35,9 +35,9 @@ describe 'Visitor visits home page' do
   end
 
   it 'and access books details successfully' do
-    author = create(:author, name: 'J.K. Rowling', nationality: 'British')
+    author = create(:author, name: 'J.K. Rowling', citizenship: 'British')
     create(:book, title: 'Harry Potter and the prisoner of Azkaban',
-                  description: 'Second title of the series',
+                  description: 'Third title of the series',
                   author: author)
     create(:book, title: 'The Fountainhead',
                   description: 'One of Rands greatest novels')
@@ -52,7 +52,7 @@ describe 'Visitor visits home page' do
 
   it 'sees book details and comes back to home page via layout button' do
     create(:book, title: 'Harry Potter and the prisoner of Azkaban',
-                  description: 'Second title of the series')
+                  description: 'Third title of the series')
 
     visit root_path
     click_on 'Harry Potter and the prisoner of Azkaban'

@@ -1,6 +1,25 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/renato/RailsProjects/Am4zon/app/models/author.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/renato/RailsProjects/Am4zon/app/models/book.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
       "/Users/renato/RailsProjects/Am4zon/app/controllers/home_controller.rb": {
         "lines": [
           1,
@@ -12,13 +31,6 @@
       },
       "/Users/renato/RailsProjects/Am4zon/app/controllers/application_controller.rb": {
         "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/renato/RailsProjects/Am4zon/app/models/book.rb": {
-        "lines": [
-          1,
           1,
           null
         ]
@@ -48,13 +60,6 @@
           0,
           null,
           null,
-          null
-        ]
-      },
-      "/Users/renato/RailsProjects/Am4zon/app/models/author.rb": {
-        "lines": [
-          1,
-          1,
           null
         ]
       },
@@ -162,6 +167,6 @@
         }
       }
     },
-    "timestamp": 1640057393
+    "timestamp": 1640083259
   }
 }

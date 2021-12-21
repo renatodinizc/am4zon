@@ -4,7 +4,7 @@ class AuthorsController < ApplicationController
   end
 
   def create
-    @author = Author.new(params.require(:author).permit(:name, :nationality))
+    @author = Author.new(params.require(:author).permit(:name, :citizenship))
     if @author.save
       flash[:notice] = 'New author created successfully!'
       redirect_to admin_path current_admin

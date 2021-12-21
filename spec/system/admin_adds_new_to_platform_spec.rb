@@ -9,7 +9,7 @@ describe 'Admin adds new' do
     click_on 'My Control Panel'
     click_on 'Add new author'
     fill_in 'Name', with: 'Eiichiro Oda'
-    fill_in 'Nationality', with: 'Japanese'
+    fill_in 'Citizenship', with: 'Japanese'
     click_on 'Create Author'
 
     expect(page).to have_current_path admin_path(admin)
@@ -25,6 +25,7 @@ describe 'Admin adds new' do
     click_on 'My Control Panel'
     click_on 'Add new book'
     fill_in 'Title', with: 'The Lord of the Rings: The Return of the King'
+    fill_in 'Description', with: 'Is the third and final volume of the series'
     select 'J.R.R. Tolkien', from: 'Author'
     click_on 'Create Book'
 

@@ -14,7 +14,7 @@ class BooksController < ApplicationController
       flash[:notice] = 'New book created successfully!'
       redirect_to admin_path current_admin
     else
-      render :New
+      render :new
     end
   end
 end

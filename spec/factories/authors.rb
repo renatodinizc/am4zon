@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :author do
-    name { 'MyString' }
-    nationality { 'MyString' }
+    sequence(:name) { |n| "Author #{n}" }
+    citizenship { 'MyString' }
   end
 end

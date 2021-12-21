@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-12-21T00:29:53-03:00">2021-12-21T00:29:53-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-12-21T07:40:59-03:00">2021-12-21T07:40:59-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,7 +23,7 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="red">
-  56.72%
+  58.57%
 </span>
 
      </span>
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>67</b> relevant lines,
-    <span class="green"><b>38</b> lines covered</span> and
+    <b>70</b> relevant lines,
+    <span class="green"><b>41</b> lines covered</span> and
     <span class="red"><b>29</b> lines missed. </span>
     (<span class="red">
-  56.72%
+  58.57%
 </span>
 )
   </div>
@@ -161,9 +161,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#d390b7b08ee918391c0f1a1012d8f393c1a0f835" class="src_link" title="app/models/author.rb">app/models/author.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">2</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">4</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -172,9 +172,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#b892a94442d3195e06d7b6813deed8fec584c0c8" class="src_link" title="app/models/book.rb">app/models/book.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">5</td>
             <td class="cell--number">3</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">2</td>
+            <td class="cell--number">3</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -385,14 +385,14 @@
     <span class="group_name">Models</span>
     (<span class="covered_percent">
       <span class="red">
-  13.33%
+  21.21%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.13
+         0.21
        </span>
     </span> hits/line
     )
@@ -405,11 +405,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>30</b> relevant lines,
-    <span class="green"><b>4</b> lines covered</span> and
+    <b>33</b> relevant lines,
+    <span class="green"><b>7</b> lines covered</span> and
     <span class="red"><b>26</b> lines missed. </span>
     (<span class="red">
-  13.33%
+  21.21%
 </span>
 )
   </div>
@@ -457,9 +457,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#d390b7b08ee918391c0f1a1012d8f393c1a0f835" class="src_link" title="app/models/author.rb">app/models/author.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">2</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">4</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -468,9 +468,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#b892a94442d3195e06d7b6813deed8fec584c0c8" class="src_link" title="app/models/book.rb">app/models/book.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">5</td>
             <td class="cell--number">3</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">2</td>
+            <td class="cell--number">3</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -973,7 +973,7 @@
 
             
 
-            <code class="ruby">    @author = Author.new(params.require(:author).permit(:name, :nationality))</code>
+            <code class="ruby">    @author = Author.new(params.require(:author).permit(:name, :citizenship))</code>
           </li>
         </div>
       
@@ -1279,7 +1279,7 @@
 
             
 
-            <code class="ruby">      render :New</code>
+            <code class="ruby">      render :new</code>
           </li>
         </div>
       
@@ -1943,8 +1943,8 @@
     
 
     <div class="t-line-summary">
-      <b>2</b> relevant lines.
-      <span class="green"><b>2</b> lines covered</span> and
+      <b>4</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -1984,6 +1984,39 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  validates :name, :citizenship, presence: true</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  validates :name, uniqueness: true</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
             <code class="ruby">end</code>
           </li>
         </div>
@@ -2007,8 +2040,8 @@
     
 
     <div class="t-line-summary">
-      <b>2</b> relevant lines.
-      <span class="green"><b>2</b> lines covered</span> and
+      <b>3</b> relevant lines.
+      <span class="green"><b>3</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -2043,6 +2076,28 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="3">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  validates :title, :description, presence: true</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
             
             
 
