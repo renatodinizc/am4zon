@@ -5,7 +5,8 @@
 
 <h4> Books you might be searching </h4>
 <% @books.each do |book| %>
-  <dl> <%= link_to book.title, book_path(book) %> </dl>
-  <dl> Description: <%= book.description %> </dl>
-  <dl> Author: <%= book.author.name %> </dl>
+  <dt> <%= link_to book.title, book_path(book) %> </dt>
+  <dt> Description: <%= book.description %> </dt>
+  <dt> Author: <%= book.author.name %> </dt>
+  <dt> Genre: <%= book.genre.title %> </dt>
 <% end %>

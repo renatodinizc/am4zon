@@ -15,6 +15,16 @@
         "lines": [
           1,
           1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/renato/RailsProjects/Am4zon/app/models/genre.rb": {
+        "lines": [
+          1,
+          1,
           null,
           1,
           null
@@ -24,11 +34,11 @@
         "lines": [
           1,
           1,
-          24,
+          26,
           null,
           null,
           1,
-          2,
+          3,
           null,
           null,
           null,
@@ -38,11 +48,10 @@
           null,
           null,
           null,
-          2,
+          3,
           null,
           null,
-          null,
-          2,
+          3,
           null,
           null
         ]
@@ -57,12 +66,31 @@
         "lines": [
           1,
           1,
-          4,
+          6,
           null,
           null
         ]
       },
       "/Users/renato/RailsProjects/Am4zon/app/controllers/authors_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/renato/RailsProjects/Am4zon/app/controllers/genres_controller.rb": {
         "lines": [
           1,
           1,
@@ -185,6 +213,6 @@
         }
       }
     },
-    "timestamp": 1640099135
+    "timestamp": 1640121312
   }
 }

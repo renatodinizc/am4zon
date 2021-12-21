@@ -17,7 +17,6 @@ class HomeController < ApplicationController
     @books = Book.joins(:author).where('title LIKE ?', "%#{search_strip}%")
                  .or(Book.joins(:author)
                  .where('authors.name LIKE ?', "%#{search_strip}%"))
-
     @authors = Author.where('name LIKE ?', "%#{search_strip}%")
   end
 end

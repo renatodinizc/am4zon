@@ -1,0 +1,8 @@
+<h1> New genre form </h1>
+<%= form_with model: @genre do |f| %>
+  <% @genre.errors.full_messages.each do |error| %>
+    <dt> • <%= error %> </dt>
+  <% end %>
+  <dt> <%= f.label :title %> <%= f.text_field :title %> </dt>
+  <dt> <%= f.submit %> </dt>
+<% end %>
