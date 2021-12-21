@@ -1,0 +1,8 @@
+<h1> New book form </h1>
+<%= form_with model: @book do |f| %>
+  <dt> <%= f.label :title %> <%= f.text_field :title %> </dt>
+  <dt> <%= f.label :description %> <%= f.text_field :description %> </dt>
+  <dt> <%= f.label :author_id %> 
+  <%= f.collection_select :author_id, Author.all, :id, :name, prompt: true %> </dt>
+  <dt> <%= f.submit %> </dt>
+<% end %>

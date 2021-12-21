@@ -5,7 +5,7 @@
         "lines": [
           1,
           1,
-          20,
+          22,
           null,
           null
         ]
@@ -20,6 +20,65 @@
         "lines": [
           1,
           1,
+          null
+        ]
+      },
+      "/Users/renato/RailsProjects/Am4zon/app/controllers/admins_controller.rb": {
+        "lines": [
+          1,
+          1,
+          4,
+          null,
+          null
+        ]
+      },
+      "/Users/renato/RailsProjects/Am4zon/app/controllers/authors_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/renato/RailsProjects/Am4zon/app/models/author.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/renato/RailsProjects/Am4zon/app/controllers/books_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
           null
         ]
       },
@@ -43,22 +102,6 @@
           null,
           0,
           null,
-          null,
-          null
-        ]
-      },
-      "/Users/renato/RailsProjects/Am4zon/app/models/author.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/renato/RailsProjects/Am4zon/app/controllers/books_controller.rb": {
-        "lines": [
-          1,
-          1,
-          2,
           null,
           null
         ]
@@ -119,6 +162,6 @@
         }
       }
     },
-    "timestamp": 1640046420
+    "timestamp": 1640057393
   }
 }
