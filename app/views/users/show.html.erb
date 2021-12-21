@@ -1,0 +1,16 @@
+<h1> Personal account of <%= @user.email %> </h1>
+<% unless @user.valid?(:profile_complete?) %>
+  <h4> You still need to complete your profile!
+  >>> <%= link_to 'Complete profile', edit_user_path(@user) %> <<< </h4>
+<% end %>
+
+<div>
+<dt> Name: <%= @user.name %> </dt>
+<dt> Birth date: <%=@user.birth_date %> </dt>
+<dt> Occupation: <%= @user.occupation %> </dt>
+<dt> Citizenship: <%= @user.citizenship %> </dt>
+<dt> Description: <%= @user.description %> </dt>
+</div>
+
+<h3> My wish list </h3>
+  

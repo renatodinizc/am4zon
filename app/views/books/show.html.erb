@@ -1,0 +1,6 @@
+<h2> <%= @book.title %> </h2>
+<dl>
+  <dt> Description: <%= @book.description %> </dt>
+  <dt> Author: <%= @book.author.name %> </dt>
+</dl>
+<%= link_to 'Back to home page', root_path %>

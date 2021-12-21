@@ -1,0 +1,10 @@
+<h1> Profile completion form </h1>
+
+<%= form_with model: @user do |f| %>
+  <dl> <%= f.label :name %> <%= f.text_field :name %> </dl>
+  <dl> <%= f.label :birth_date %> <%= f.date_field :birth_date %> </dl>
+  <dl> <%= f.label :occupation %> <%= f.text_field :occupation %> </dl>
+  <dl> <%= f.label :citizenship %> <%= f.text_field :citizenship %> </dl>
+  <dl> <%= f.label :description %> <%= f.text_area :description %> </dl>
+  <dl> <%= f.submit 'Update profile' %> </dl>
+<% end %>

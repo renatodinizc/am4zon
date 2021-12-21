@@ -11,6 +11,33 @@
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <% if user_signed_in? %>
+      <%= current_user.email %> is logged in as User
+      &emsp;
+      <%= link_to 'Log out', destroy_user_session_path , method: :delete %>
+      &emsp;
+      <%= link_to 'My Account', user_path(current_user) %>
+
+    <% elsif admin_signed_in? %>
+      <%= current_admin.email %> is logged in as Admin
+      &emsp;
+      <%= link_to 'Log out', destroy_admin_session_path , method: :delete %>
+
+    <% else %>
+      <%= link_to 'Create new User account', new_user_registration_path %>
+      &emsp;
+      <%= link_to 'Login as User', new_user_session_path %>
+      &emsp;
+      <%= link_to 'Create new Admin account', new_admin_registration_path %>
+      &emsp;
+      <%= link_to 'Login as Admin', new_admin_session_path %>
+    <% end %>
+    &emsp;
+    <%= link_to 'Home page', root_path %>
+    <hr>
     <%= yield %>
   </body>
 </html>
