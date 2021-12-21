@@ -7,9 +7,9 @@ describe Author do
 
       author.valid?
 
-      expect(author.errors.full_messages_for(:name)).to include 
-      "Name can't be blank"
-      expect(author.errors.full_messages_for(:citizenship)).to include 
+      expect(author.errors.full_messages_for(:name))
+        .to include "Name can't be blank"
+      expect(author.errors.full_messages_for(:citizenship)).to include
       "Citizenship can't be blank"
     end
 
@@ -23,7 +23,7 @@ describe Author do
 
       author.valid?
 
-      expect(author.errors.full_messages_for(:name)).to include 
+      expect(author.errors.full_messages_for(:name)).to include
       'Name has already been taken'
     end
   end

@@ -25,7 +25,7 @@ describe 'Admin adds new' do
     click_on 'My Control Panel'
     click_on 'Add new book'
     fill_in 'Title', with: 'The Lord of the Rings: The Return of the King'
-    fill_in 'Description', with: 'Is the third and final volume of the series'
+    fill_in 'Description', with: 'The third and final volume of the series'
     select 'J.R.R. Tolkien', from: 'Author'
     click_on 'Create Book'
 

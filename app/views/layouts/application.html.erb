@@ -37,6 +37,12 @@
     <% end %>
     &emsp;
     <%= link_to 'Home page', root_path %>
+    <div>
+    <%= form_with url: search_path do |f| %>
+      <%= f.label :search %> <%= f.text_field :search %>
+      <%= f.submit 'Search' %>
+    <% end %>
+    </div>
     <hr>
     <%= yield %>
   </body>

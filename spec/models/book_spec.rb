@@ -7,10 +7,10 @@ describe Book do
 
       book.valid?
 
-      expect(book.errors.full_messages_for(:title)).to include
-      "Title can't be blank"
-      expect(book.errors.full_messages_for(:description)).to include
-      "Description can't be blank"
+      expect(book.errors.full_messages_for(:title))
+        .to include "Title can't be blank"
+      expect(book.errors.full_messages_for(:description))
+        .to include "Description can't be blank"
     end
 
     it 'associations successfully' do

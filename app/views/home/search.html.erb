@@ -1,0 +1,11 @@
+<h4> Authors you might be searching </h4>
+<% @authors.each do |author| %>
+  <dl> <%= author.name %> </dl>
+<% end %>
+
+<h4> Books you might be searching </h4>
+<% @books.each do |book| %>
+  <dl> <%= link_to book.title, book_path(book) %> </dl>
+  <dl> Description: <%= book.description %> </dl>
+  <dl> Author: <%= book.author.name %> </dl>
+<% end %>
