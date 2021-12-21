@@ -11,6 +11,10 @@ describe Book do
         .to include "Title can't be blank"
       expect(book.errors.full_messages_for(:description))
         .to include "Description can't be blank"
+      expect(book.errors.full_messages_for(:author))
+        .to include 'Author must exist'
+      expect(book.errors.full_messages_for(:genre))
+        .to include 'Genre must exist'
     end
 
     it 'associations successfully' do
