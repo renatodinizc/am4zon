@@ -10,12 +10,15 @@ ayn_rand = Author.create(name: 'Ayn Rand', citizenship: 'Russian')
 jrr_tolkien = Author.create(name: 'J.R.R. Tolkien',
                             citizenship: 'South African')
 plato = Author.create(name: 'Plato', citizenship: 'Greek')
+james_stewart = Author.create(name: 'James Stewart', citizenship: 'Canadian')
 
 # Genres
 
 fantasy = Genre.create(title: 'Fantasy')
 fiction = Genre.create(title: 'Fiction')
 philosophy = Genre.create(title: 'Philosophy')
+math = Genre.create(title: 'Math')
+
 # Books
 Book.create(title: 'Harry Potter and the prisoner of Azkaban',
             description: 'Third title of the series',
@@ -29,3 +32,18 @@ Book.create(title: 'The Lord of the Rings: Return of the King',
 Book.create(title: 'The Republic', 
             description: 'A Socratic dialogue, concerning justice ',
             author: plato, genre: philosophy)
+Book.create(title: 'Harry Potter and the Deathly Hallows',
+            description: 'Seventh title of the series',
+            author: jk_rowling, genre: fantasy)
+Book.create(title: 'Harry Potter and the Goblet of Fire',
+            description: 'Fourth title of the series',
+            author: jk_rowling, genre: fantasy)
+Book.create(title: 'Harry Potter and the Half-Blood Prince',
+            description: 'Sixth title of the series',
+            author: jk_rowling, genre: fantasy)
+Book.create(title: 'Essential Calculus with Differential Equations',
+            description: 'Introduces inequalities, absolute value, induction, and other topics',
+            author: james_stewart, genre: math)
+Book.create(title: 'Calculus 1',
+            description: 'First volume of introduction to caculus',
+            author: james_stewart, genre: math)

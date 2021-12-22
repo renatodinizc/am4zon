@@ -1,0 +1,12 @@
+<h1> Author profile </h1>
+<dt> Name: <%= @author.name %> </dt>
+<dt> Citizenship: <%= @author.citizenship %> </dt>
+
+<h4> Books from the author </h4>
+<% @author.books.each do |book| %>
+  <dl>
+    <dt> <%= link_to book.title, book_path(book) %> </dt>
+    <dt> Description: <%= book.description %> </dt>
+    <dt> Genre: <%= book.genre.title %> </dt>
+  </dl>
+<% end %>

@@ -1,12 +1,22 @@
 <h4> Authors you might be searching </h4>
-<% @authors.each do |author| %>
-  <dl> <%= author.name %> </dl>
+<% if @authors.empty? %>
+  <p> No valid authors were found </p>
+<% else %>
+  <% @authors.each do |author| %>
+    <dl> <%= link_to author.name, author_path(author) %> </dl>
+  <% end %>
 <% end %>
 
 <h4> Books you might be searching </h4>
-<% @books.each do |book| %>
-  <dt> <%= link_to book.title, book_path(book) %> </dt>
-  <dt> Description: <%= book.description %> </dt>
-  <dt> Author: <%= book.author.name %> </dt>
-  <dt> Genre: <%= book.genre.title %> </dt>
+<% if @books.empty? %>
+  <p> No valid books were found </p>
+<% else %>
+  <% @books.each do |book| %>
+    <dl>
+      <dt> <%= link_to book.title, book_path(book) %> </dt>
+      <dt> Description: <%= book.description %> </dt>
+      <dt> Author: <%= book.author.name %> </dt>
+      <dt> Genre: <%= book.genre.title %> </dt>
+    </dl>
+  <% end %>
 <% end %>

@@ -61,4 +61,30 @@ describe 'Visitor visits home page' do
     expect(page).to have_current_path root_path
     expect(page).to have_content 'Welcome to Am4zon'
   end
+
+  it 'sees book details and access author details' do
+    jk_rowling = create(:author, name: 'J.K. Rowling', citizenship: 'British')
+    james_stewart = create(:author, name: 'James Stewart')
+    create(:book, title: 'Harry Potter and the Deathly Hallows',
+                  author: jk_rowling)
+    create(:book, title: 'Harry Potter and Goblet of Fire', author: jk_rowling)
+    create(:book, title: 'Harry Potter and the Half-Blood Prince',
+                  author: jk_rowling)
+    create(:book, title: 'Essential Calculus with Differential Equations',
+                  author: james_stewart)
+
+    visit root_path
+    click_on 'Harry Potter and the Deathly Hallows'
+    click_on 'J.K. Rowling'
+
+    expect(page).to have_content 'Name: J.K. Rowling'
+    expect(page).to have_content 'Citizenship: British'
+    expect(page).to have_content 'Books from the author'
+    expect(page).to have_content 'Harry Potter and the Deathly Hallows'
+    expect(page).to have_content 'Harry Potter and Goblet of Fire'
+    expect(page).to have_content 'Harry Potter and the Half-Blood Prince'
+    expect(page).not_to have_content 'James Stewart'
+    expect(page)
+      .not_to have_content 'Essential Calculus with Differential Equations'
+  end
 end

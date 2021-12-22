@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :admins, only: [:show]
   resources :users, only: %i[show edit update]
 
-  resources :authors, only: %i[new create]
+  resources :authors, only: %i[show new create]
   resources :genres, only: %i[new create]
   resources :books, only: %i[show new create]
 end
