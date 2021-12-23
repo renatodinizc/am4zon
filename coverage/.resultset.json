@@ -43,9 +43,9 @@
           1,
           null,
           1,
-          10,
-          10,
-          10,
+          14,
+          14,
+          14,
           null,
           null
         ]
@@ -57,6 +57,31 @@
           null,
           1,
           1,
+          null
+        ]
+      },
+      "/Users/renato/RailsProjects/Am4zon/app/models/book_collection.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          8,
+          8,
+          8,
+          null,
           null
         ]
       },
@@ -83,7 +108,7 @@
         "lines": [
           1,
           1,
-          33,
+          37,
           null,
           null,
           1,
@@ -124,7 +149,7 @@
         "lines": [
           1,
           1,
-          9,
+          14,
           null,
           null
         ]
@@ -195,6 +220,33 @@
           null
         ]
       },
+      "/Users/renato/RailsProjects/Am4zon/app/controllers/book_collections_controller.rb": {
+        "lines": [
+          1,
+          1,
+          4,
+          null,
+          null,
+          1,
+          4,
+          4,
+          1,
+          1,
+          null,
+          3,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          4,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/renato/RailsProjects/Am4zon/app/controllers/users_controller.rb": {
         "lines": [
           1,
@@ -217,6 +269,6 @@
         ]
       }
     },
-    "timestamp": 1640173232
+    "timestamp": 1640263874
   }
 }

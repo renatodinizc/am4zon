@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :authors, only: %i[show new create]
   resources :genres, only: %i[new create]
   resources :books, only: %i[show new create]
+  resources :book_collections, only: %i[show new create]
 end

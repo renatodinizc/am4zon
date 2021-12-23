@@ -1,0 +1,37 @@
+<h1> New book collection form </h1>
+<%= form_with model: @book_collection do |f| %>
+  <% @book_collection.errors.full_messages.each do |error| %>
+    <dt> • <%= error %> </dt>
+  <% end %>
+  <dt> <%= f.label :title %> <%= f.text_field :title %> </dt>
+  <dt> <%= f.label :description %> <%= f.text_field :description %> </dt>
+  <dt>
+  <%= f.label :book1_id %>
+  <%= f.collection_select :book1_id, Book.all, :id, :title, prompt: true %>
+  </dt>
+  <dt>
+  <%= f.label :book2_id %>
+  <%= f.collection_select :book2_id, Book.all, :id, :title, prompt: true %>
+  </dt>
+  <dt>
+  <%= f.label :book3_id %>
+  <%= f.collection_select :book3_id, Book.all, :id, :title, prompt: true %>
+  </dt>
+  <dt>
+  <%= f.label :book4_id %>
+  <%= f.collection_select :book4_id, Book.all, :id, :title, prompt: true %>
+  </dt>
+  <dt>
+  <%= f.label :book5_id %>
+  <%= f.collection_select :book5_id, Book.all, :id, :title, prompt: true %>
+  </dt>
+  <dt>
+  <%= f.label :book6_id %>
+  <%= f.collection_select :book6_id, Book.all, :id, :title, prompt: true %>
+  </dt>
+  <dt>
+  <%= f.label :book7_id %>
+  <%= f.collection_select :book7_id, Book.all, :id, :title, prompt: true %>
+  </dt>
+  <dt> <%= f.submit %> </dt>
+<% end %>

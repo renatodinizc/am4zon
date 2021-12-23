@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :book do
-    title { 'MyString' }
-    description { 'MyString' }
+    sequence(:title) { |n| "Book#{n}" }
+    description { 'Greate book' }
     author
     genre
   end
