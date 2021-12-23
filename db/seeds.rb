@@ -1,8 +1,10 @@
 # Admins
 Admin.create(email: 'renato@am4zon.com', password: '123123')
+Admin.create(email: 'admin@am4zon.com', password: '123123')
 
 # User
 User.create(email: 'user@gmail.com', password: '123123')
+User.create(email: 'joao@gmail.com', password: '123123')
 
 # Authors
 jk_rowling = Author.create(name: 'J.K. Rowling', citizenship: 'British')

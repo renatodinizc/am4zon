@@ -1,4 +1,6 @@
 class GenresController < ApplicationController
+  before_action :authenticate_admin!, only: %i[new create]
+
   def new
     @genre = Genre.new
   end

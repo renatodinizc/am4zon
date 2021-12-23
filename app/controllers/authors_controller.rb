@@ -1,4 +1,6 @@
 class AuthorsController < ApplicationController
+  before_action :authenticate_admin!, only: %i[new create]
+
   def show
     @author = Author.find(params[:id])
   end

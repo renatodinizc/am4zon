@@ -1,4 +1,6 @@
 class BookCollectionsController < ApplicationController
+  before_action :authenticate_admin!, only: %i[new create]
+
   def new
     @book_collection = BookCollection.new
   end
