@@ -1,5 +1,3 @@
-[![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop/rubocop)
-
 # Am4zon
 The Am4zon project is in essence a clone website from the original Amazon®.
 
@@ -19,6 +17,7 @@ awesome pricing.
 
 This is Am4zon, your new favorite online bookstore.
 
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop/rubocop)
 
 ## Architeture e main models
 
@@ -59,8 +58,8 @@ Install instructions
 * Download repo
 
 ```
-git clone git@github.com:renatodinizc/final_project_renato_td7
-cd final_project_renato_td7
+git clone git@github.com:renatodinizc/am4zon
+cd am4zon
 ```
 
 * Check ruby version
