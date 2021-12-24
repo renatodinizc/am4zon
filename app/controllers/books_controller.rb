@@ -3,6 +3,13 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
+    @book_collections = BookCollection.where(book1: @book)
+                                      .or(BookCollection.where(book2: @book))
+                                      .or(BookCollection.where(book3: @book))
+                                      .or(BookCollection.where(book4: @book))
+                                      .or(BookCollection.where(book5: @book))
+                                      .or(BookCollection.where(book6: @book))
+                                      .or(BookCollection.where(book7: @book))
   end
 
   def new

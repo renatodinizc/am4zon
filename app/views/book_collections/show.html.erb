@@ -1,0 +1,20 @@
+<h1> <%= @book_collection.title %> </h1>
+<dl>
+  <dt> <%= @book_collection.description %> </dt>
+  <h4> Books in this collection: </h4>
+  <dt> <%= link_to @book_collection.book1.title, book_path(@book_collection.book1) %> </dt>
+  <dt> <%= link_to @book_collection.book2.title, book_path(@book_collection.book2) %> </dt>
+  <dt> <%= link_to @book_collection.book3.title, book_path(@book_collection.book3) %> </dt>
+  <% if @book_collection.book4 %>
+  <dt> <%= link_to @book_collection.book4.title, book_path(@book_collection.book4) %> </dt>
+  <% end %>
+  <% if @book_collection.book5 %>
+  <dt> <%= link_to @book_collection.book5.title, book_path(@book_collection.book5) %> </dt>
+  <% end %>
+  <% if @book_collection.book6 %>
+  <dt> <%= link_to @book_collection.book6.title, book_path(@book_collection.book6) %> </dt>
+  <% end %>
+  <% if @book_collection.book7 %>
+  <dt> <%= link_to @book_collection.book7.title, book_path(@book_collection.book7) %> </dt>
+  <% end %>
+</dl>

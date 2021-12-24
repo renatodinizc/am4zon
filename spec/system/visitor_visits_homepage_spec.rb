@@ -87,4 +87,23 @@ describe 'Visitor visits home page' do
     expect(page)
       .not_to have_content 'Essential Calculus with Differential Equations'
   end
+
+  it 'sees book details and access book collection it is in' do
+    book1 = create(:book, title: 'Harry Potter and the Deathly Hallows')
+    book2 = create(:book, title: 'Harry Potter and Goblet of Fire')
+    book3 = create(:book, title: 'Harry Potter and the Half-Blood Prince')
+    collection = create(:book_collection, title: 'Harry Potter initial trilogy',
+                                          book1: book1, book2: book2,
+                                          book3: book3)
+
+    visit root_path
+    click_on 'Harry Potter and the Deathly Hallows'
+    click_on 'Harry Potter initial trilogy'
+
+    expect(page).to have_current_path book_collection_path(collection)
+    expect(page).to have_content 'Harry Potter initial trilogy'
+    expect(page).to have_link 'Harry Potter and the Deathly Hallows'
+    expect(page).to have_link 'Harry Potter and Goblet of Fire'
+    expect(page).to have_link 'Harry Potter and the Half-Blood Prince'
+  end
 end

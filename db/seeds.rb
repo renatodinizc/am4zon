@@ -49,3 +49,5 @@ Book.create(title: 'Essential Calculus with Differential Equations',
 Book.create(title: 'Calculus 1',
             description: 'First volume of introduction to caculus',
             author: james_stewart, genre: math)
+
+# BookCollections

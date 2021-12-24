@@ -4,4 +4,15 @@
   <dt> Author: <%= link_to @book.author.name, author_path(@book.author) %> </dt>
   <dt> Genre: <%= @book.genre.title %> </dt>
 </dl>
+
+<h2> Collections that contain this book </h2>
+
+<div>
+<% @book_collections.each do |collection| %>
+  <dl>
+    <dt> <%= link_to collection.title, book_collection_path(collection) %> </dt>
+    <dt> Description: <%= collection.description %> </dt>
+  </dl>
+<% end %>
+</div>
 <%= link_to 'Back to home page', root_path %>
