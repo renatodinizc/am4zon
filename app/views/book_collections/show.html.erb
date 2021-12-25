@@ -1,6 +1,7 @@
 <h1> <%= @book_collection.title %> </h1>
+<dt> Description: <%= @book_collection.description %> </dt>
+<dt> Price: <%= number_to_currency @book_collection.price %> </dt>
 <dl>
-  <dt> <%= @book_collection.description %> </dt>
   <h4> Books in this collection: </h4>
   <dt> <%= link_to @book_collection.book1.title, book_path(@book_collection.book1) %> </dt>
   <dt> <%= link_to @book_collection.book2.title, book_path(@book_collection.book2) %> </dt>

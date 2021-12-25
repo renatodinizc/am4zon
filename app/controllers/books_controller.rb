@@ -18,7 +18,8 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(params.require(:book).permit(:title, :description,
-                                                  :author_id, :genre_id))
+                                                  :author_id, :genre_id,
+                                                  :price))
     if @book.save
       flash[:notice] = 'New book created successfully!'
       redirect_to admin_path current_admin

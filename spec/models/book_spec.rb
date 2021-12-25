@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Book do
   context 'validation on' do
     it 'attributtes successfully' do
-      book = Book.new
+      book = Book.new(price: nil)
 
       book.valid?
 
@@ -11,6 +11,8 @@ describe Book do
         .to include "Title can't be blank"
       expect(book.errors.full_messages_for(:description))
         .to include "Description can't be blank"
+      expect(book.errors.full_messages_for(:price))
+        .to include "Price can't be blank"
       expect(book.errors.full_messages_for(:author))
         .to include 'Author must exist'
       expect(book.errors.full_messages_for(:genre))

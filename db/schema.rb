@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_23_124759) do
+ActiveRecord::Schema.define(version: 2021_12_25_132916) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -32,11 +32,6 @@ ActiveRecord::Schema.define(version: 2021_12_23_124759) do
     t.index ["name"], name: "index_authors_on_name", unique: true
   end
 
-  create_table "book_colecctions", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "book_collections", force: :cascade do |t|
     t.string "title"
     t.string "description"
@@ -49,6 +44,8 @@ ActiveRecord::Schema.define(version: 2021_12_23_124759) do
     t.integer "book7_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "price", default: "76.0"
+    t.boolean "sale", default: false
     t.index ["book1_id"], name: "index_book_collections_on_book1_id"
     t.index ["book2_id"], name: "index_book_collections_on_book2_id"
     t.index ["book3_id"], name: "index_book_collections_on_book3_id"
@@ -66,11 +63,11 @@ ActiveRecord::Schema.define(version: 2021_12_23_124759) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "genre_id", null: false
-    t.integer "book_id"
     t.integer "book_collection_id"
+    t.decimal "price", default: "19.7"
+    t.boolean "sale", default: false
     t.index ["author_id"], name: "index_books_on_author_id"
     t.index ["book_collection_id"], name: "index_books_on_book_collection_id"
-    t.index ["book_id"], name: "index_books_on_book_id"
     t.index ["genre_id"], name: "index_books_on_genre_id"
   end
 

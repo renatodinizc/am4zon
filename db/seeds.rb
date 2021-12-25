@@ -57,7 +57,7 @@ Book.create(title: 'The Fountainhead',
             description: 'One of Rands greatest novels',
             author: ayn_rand, genre: fiction)
 Book.create(title: 'The Republic', 
-            description: 'A Socratic dialogue, concerning justice ',
+            description: 'A Socratic dialogue concerning justice ',
             author: plato, genre: philosophy)
 Book.create(title: 'Essential Calculus with Differential Equations',
             description: 'Introduces inequalities, induction and other topics',
@@ -75,3 +75,4 @@ BookCollection.create(title: 'The wizardry series collection',
 BookCollection.create(title: 'The Middle-earth collection',
                       description: 'The fantasy trilogy that defined a genre',
                       book1: lotr_flw, book2: lotr_tt, book3: lotr_king)
+                      

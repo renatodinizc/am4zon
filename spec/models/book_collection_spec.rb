@@ -3,7 +3,7 @@ require 'rails_helper'
 describe BookCollection do
   context 'validation on' do
     it 'attributes successfully' do
-      book_collection = BookCollection.new
+      book_collection = BookCollection.new(price: nil)
 
       book_collection.valid?
 
@@ -11,6 +11,8 @@ describe BookCollection do
         .to include "Title can't be blank"
       expect(book_collection.errors.full_messages_for(:description))
         .to include "Description can't be blank"
+      expect(book_collection.errors.full_messages_for(:price))
+        .to include "Price can't be blank"
       expect(book_collection.errors.full_messages_for(:book1))
         .to include 'Book1 must exist'
       expect(book_collection.errors.full_messages_for(:book2))

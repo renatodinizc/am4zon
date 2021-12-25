@@ -19,7 +19,7 @@ This is Am4zon, your new favorite online bookstore.
 
 [![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop/rubocop)
 
-## Architeture e main models
+## Architeture and main models
 
 The application is currently composed of 3 main models: Admin, User, Book
 
@@ -72,9 +72,11 @@ In case of difference in version, install the version last referred with rbenv
 
 `rbenv install 3.0.2`
 
-Install dependencies with bundle and yarn
+Install system dependencies
 
-`bundle && yarn`
+`bin/setup`
+
+`rails db:reset`
 
 Initialize server
 `rails s`
@@ -90,7 +92,7 @@ for immediate execution:
 * Two Users accounts
   - email: joao@gmail.com | password: 123123
   - email: user@gmail.com | password: 123123
-* Five Authors
+* Six Authors
   - J.K. Rowling
   - Ayn Rand
   - J.R.R. Tolkien
@@ -102,7 +104,7 @@ for immediate execution:
   - Fiction
   - Philosophy
   - Engineering
-* Nine Books
+* Fourteen Books
   - Harry Potter and the Sorcerer's Stone
   - Harry Potter and the Chamber of Secrets
   - Harry Potter and the Prisoner of Azkaban
@@ -118,8 +120,8 @@ for immediate execution:
   - Essential Calculus with Differential Equations
   - Fluid Mechanics
 * Two Book Collections
- - The wizardry series collection
- - The Middle-earth collection
+  - The wizardry series collection
+  - The Middle-earth collection
 
 # Gems, dependencies and versions
 

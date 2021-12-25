@@ -6,6 +6,7 @@
   <dt> <%= f.label :title %> <%= f.text_field :title %> </dt>
   <dt> <%= f.label :description %> <%= f.text_field :description %> </dt>
   <dt>
+  <dt> <%= f.label :price %> <%= f.number_field :price, step: :any %> </dt>
   <%= f.label :book1_id %>
   <%= f.collection_select :book1_id, Book.all, :id, :title, prompt: true %>
   </dt>

@@ -3,6 +3,7 @@
   <dt> Description: <%= @book.description %> </dt>
   <dt> Author: <%= link_to @book.author.name, author_path(@book.author) %> </dt>
   <dt> Genre: <%= @book.genre.title %> </dt>
+  <dt> Price: <%= number_to_currency @book.price %> </dt>
 </dl>
 
 <h2> Collections that contain this book </h2>

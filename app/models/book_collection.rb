@@ -7,7 +7,7 @@ class BookCollection < ApplicationRecord
   belongs_to :book6, class_name: 'Book', optional: true
   belongs_to :book7, class_name: 'Book', optional: true
 
-  validates :title, :description, presence: true
+  validates :title, :description, :price, presence: true
   validates :title, uniqueness: true
   validate :uniq_collection?
 

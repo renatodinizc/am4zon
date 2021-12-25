@@ -70,6 +70,7 @@ describe 'Admin adds new' do
     fill_in 'Description', with: 'The third and final volume of the series'
     select 'J.R.R. Tolkien', from: 'Author'
     select 'Fantasy', from: 'Genre'
+    fill_in 'Price', with: 25
     click_on 'Create Book'
 
     expect(page).to have_current_path admin_path(admin)
@@ -83,10 +84,12 @@ describe 'Admin adds new' do
     visit root_path
     click_on 'My Control Panel'
     click_on 'Add new book'
+    fill_in 'Price', with: ''
     click_on 'Create Book'
 
     expect(page).to have_content "Title can't be blank"
     expect(page).to have_content "Description can't be blank"
+    expect(page).to have_content "Price can't be blank"
     expect(page).to have_content 'Author must exist'
     expect(page).to have_content 'Genre must exist'
     expect(page).not_to have_content 'New book created successfully!'
@@ -108,6 +111,7 @@ describe 'Admin adds new' do
     click_on 'Add new book collection'
     fill_in 'Title', with: 'Harry Potter series collection'
     fill_in 'Description', with: 'Collection of the original wizardry series'
+    fill_in 'Price', with: 56
     select "Harry Potter and the Sorcerer's Stone", from: 'Book1'
     select 'Harry Potter and the Chamber of Secrets', from: 'Book2'
     select 'Harry Potter and the Prisoner of Azkaban', from: 'Book3'
@@ -138,17 +142,19 @@ describe 'Admin adds new' do
     expect(page).to have_content 'Book3 must exist'
   end
 
-  it 'book collection and cannot leave title nor description empty' do
+  it 'book collection and cannot leave title, description nor price empty' do
     admin = create(:admin)
 
     login_as admin, scope: :admin
     visit root_path
     click_on 'My Control Panel'
     click_on 'Add new book collection'
+    fill_in 'Price', with: ''
     click_on 'Create Book collection'
 
     expect(page).not_to have_content 'New book collection created successfully!'
     expect(page).to have_content "Title can't be blank"
+    expect(page).to have_content "Price can't be blank"
     expect(page).to have_content "Description can't be blank"
   end
 
