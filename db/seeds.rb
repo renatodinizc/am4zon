@@ -75,4 +75,3 @@ BookCollection.create(title: 'The wizardry series collection',
 BookCollection.create(title: 'The Middle-earth collection',
                       description: 'The fantasy trilogy that defined a genre',
                       book1: lotr_flw, book2: lotr_tt, book3: lotr_king)
-                      

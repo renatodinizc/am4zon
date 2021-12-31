@@ -5,6 +5,12 @@ Rails.application.routes.draw do
   root to: 'home#index'
   post 'search', to: 'home#search'
 
+  namespace :api do
+    namespace :v1 do
+      resources :books, only: %i[index show create]
+    end
+  end
+  
   resources :admins, only: [:show]
   resources :users, only: %i[show edit update]
 

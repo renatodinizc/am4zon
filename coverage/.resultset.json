@@ -244,6 +244,31 @@
           null
         ]
       },
+      "/Users/renato/RailsProjects/am4zon/app/controllers/api/v1/books_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/renato/RailsProjects/am4zon/app/controllers/users_controller.rb": {
         "lines": [
           1,
@@ -311,6 +336,6 @@
         ]
       }
     },
-    "timestamp": 1640440337
+    "timestamp": 1640967694
   }
 }
