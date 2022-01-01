@@ -1,0 +1,29 @@
+class Api::V1::BooksController < ActionController::API
+  rescue_from ActiveRecord::ConnectionNotEstablished, with: :db_offline
+
+  def index
+      @books = Book.all
+      render status: :ok,
+            json: @books.to_json(only: %i[title description price],
+                                  include: { author:
+                                           { only: %i[name citizenship] } })
+  end
+
+  def show
+    begin
+      @book = Book.find(params[:id])
+      render status: :ok,
+            json: @book.to_json(only: %i[title description price],
+                                include: { author:
+                                         { only: %i[name citizenship] } })
+    rescue ActiveRecord::RecordNotFound
+      render status: 404, json: { message: 'Book has not been found' }
+    end
+  end
+
+  private
+
+  def db_offline
+    render status: 503, json: { message: 'db seems to be unavaiable' }
+  end
+end
