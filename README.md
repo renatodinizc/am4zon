@@ -1,11 +1,7 @@
 # Am4zon
 The Am4zon project is in essence a clone website from the original Amazon®.
 
-This is the first of a two-part project, consisting of a book retail store and
-a payment platform which will handles all processing and buyer authentication
-related functionality via API RESTful.
-
-In the Am4zon platform, users can easyly access all books by genre and author,
+In the Am4zon platform, users can easily access all books by genre and author,
 search through our entire database via the menu search box and access book
 collections tailored by our specialists.
 
@@ -46,10 +42,11 @@ capabilities. Those are listed as follows:
 
 * Admin and User can create account on platform informing e-mail and a password.
 * Authenticated Admin can register a new Genre, Author and Book onto platform
-* A book must contain it's title, description, author and genre detailed.
+* A book must contain it's title, description, author, genre and price detailed.
 * Admin can create a collection of books which must contain at least three
   unique books, a title and it's description.
 * User can visualize and update own personal profile with additional info.
+* API exposition for the Book model
 
 ## Install and startup
 
@@ -142,3 +139,5 @@ for immediate execution:
 * Devise authentication solution
 
 * Rubocop linter and code formatter
+
+* FFaker for generating fake data for tests
