@@ -37,6 +37,7 @@ The project includes other set of models that add to the application
 capabilities. Those are listed as follows:
 * Author
 * Genre
+* BookCollection
 
 ## Implemented features so far
 

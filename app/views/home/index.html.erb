@@ -1,14 +1,17 @@
-<h1> Welcome to Am4zon </h1>
-<h3> Your new favorite online bookstore </h3>
+<section class='home-index'>
+  <h1> Welcome to Am4zon </h1>
+  <h3> Your new favorite online bookstore </h3>
 
-<% if @books.any? %>
-  <% @books.each do |book| %>
-  <dl>
-    <dt> <%= link_to book.title, book_path(book) %> </dt>
-    <dt> Description: <%= book.description %> </dt>
-    <dt> Author: <%= book.author.name %> </dt>
-  </dl>
+  <% if @books.any? %>
+    <% @books.each do |book| %>
+    <dl>
+      <dt> <%= link_to book.title, book_path(book) %> </dt>
+      <dt> Description: <%= book.description %> </dt>
+      <dt> Author: <%= book.author.name %> </dt>
+    </dl>
+    <% end %>
+  <% else %>
+    <b> There are no current avaiable books </b>
   <% end %>
-<% else %>
-  <b> There are no current avaiable books </b>
-<% end %>
+
+</section>

@@ -14,36 +14,38 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <% if user_signed_in? %>
-      <%= current_user.email %> is logged in as User
-      &emsp;
-      <%= link_to 'Log out', destroy_user_session_path , method: :delete %>
-      &emsp;
-      <%= link_to 'My Account', user_path(current_user) %>
-    <% elsif admin_signed_in? %>
-      <%= current_admin.email %> is logged in as Admin
-      &emsp;
-      <%= link_to 'My Control Panel', admin_path(current_admin) %>
-      &emsp;
-      <%= link_to 'Log out', destroy_admin_session_path , method: :delete %>
-    <% else %>
-      <%= link_to 'Create new User account', new_user_registration_path %>
-      &emsp;
-      <%= link_to 'Login as User', new_user_session_path %>
-      &emsp;
-      <%= link_to 'Create new Admin account', new_admin_registration_path %>
-      &emsp;
-      <%= link_to 'Login as Admin', new_admin_session_path %>
-    <% end %>
-    &emsp;
-    <%= link_to 'Home page', root_path %>
-    <div>
-    <%= form_with url: search_path do |f| %>
-      <%= f.label :search %> <%= f.text_field :search %>
+  <section class='header'>
+    <%= image_tag 'logo.png', alt: 'Amazon® logo icon', class: 'header-logo' %>
+    <%= form_with url: search_path, class: 'search-box' do |f| %>
+      <%= f.label :search %> <%= f.text_field :search, size: 100 %>
       <%= f.submit 'Search' %>
     <% end %>
+
+    <div class='login-options'>
+      <% if user_signed_in? %>
+        <%= current_user.email %> is logged in as User
+        &emsp;
+        <%= link_to 'Log out', destroy_user_session_path , method: :delete %>
+        &emsp;
+        <%= link_to 'My Account', user_path(current_user) %>
+      <% elsif admin_signed_in? %>
+        <%= current_admin.email %> is logged in as Admin
+        &emsp;
+        <%= link_to 'My Control Panel', admin_path(current_admin) %>
+        &emsp;
+        <%= link_to 'Log out', destroy_admin_session_path , method: :delete %>
+      <% else %>
+        <%= link_to 'Create new User account', new_user_registration_path %>
+        &emsp;
+        <%= link_to 'Login as User', new_user_session_path %>
+        &emsp;
+        <%= link_to 'Create new Admin account', new_admin_registration_path %>
+        &emsp;
+        <%= link_to 'Login as Admin', new_admin_session_path %>
+      <% end %>
     </div>
-    <hr>
+
+  </section>
     <%= yield %>
   </body>
 </html>

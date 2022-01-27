@@ -1,0 +1,4 @@
+.home-index {
+  display: flex;
+  flex-direction: column;
+}
