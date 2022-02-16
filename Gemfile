@@ -6,6 +6,7 @@ gem 'rails', '~> 6.1.4', '>= 6.1.4.4'
 
 gem 'devise'
 gem 'jbuilder', '~> 2.7'
+gem 'pg'
 gem 'puma', '~> 5.0'
 gem 'rubocop-rails', require: false
 gem 'turbolinks', '~> 5'
@@ -25,7 +26,6 @@ group :development, :test do
   gem 'ffaker'
   gem 'rspec-rails'
   gem 'simplecov', require: false
-  gem 'sqlite3'
 end
 
 group :development do
@@ -33,10 +33,6 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
-end
-
-group :production do
-  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
